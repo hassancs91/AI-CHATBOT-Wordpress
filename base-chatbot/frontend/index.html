@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script defer src="./script.js"></script>
+
+    <title>Mini Chatbot</title>
+</head>
+
+
+<body>
+    <div class="chatbot-container lwh-open-cbot">
+        <div class="custom-chatbot__image" onclick="lwhOpenCbotToggleChat()">
+            <dotlottie-player src="https://lottie.host/feefeb87-8206-4b50-8696-bda4747b4fdf/uUJIo0ICb6.json"
+                background="transparent" speed="1" style="width: 80px; height: 80px;" loop autoplay></dotlottie-player>
+
+        </div>
+        <div class="custom-chatbot">
+
+            <div class="chat">
+                <div class="feedback-form">
+                    <div class="feedback-header">
+                        <p>Feedback</p>
+                        <p class="feedback__modal-close" onclick="lwhOpenCbotremoveFeedbackModal()"><i class="fa-solid fa-xmark"></i></p>
+                    </div>
+                    <form onsubmit="lwhOpenCbotsendFeedback(event)">
+                        <textarea name="feedback" id="feedback"  rows="4" required></textarea>
+                        <button type="submit">Send Feedback</button>
+                    </form>
+                    
+                </div>
+                <div class="loading">
+                    <p><i class="fa-solid fa-circle-notch fa-spin"></i></p>
+                    <p>Wait a moment</p>
+                </div>
+                <div class="popup">
+                    <p>Oops! Something went wrong!</h2>
+                </div>
+                <div class="chat__header">
+                    <div>
+                        <div class="chat__title"> AI Chatbot
+                            
+                        </div>
+                        <div>
+                            <div class="chat__status"><span></span> Offline</div>
+                           
+                        </div>
+                    </div>
+                    <div>
+                
+
+                        <div class="chat__close-icon" onclick="lwhOpenCbotToggleChat()">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat__messages">
+                   
+
+
+                </div>
+
+
+                <div class="chat__input-area">
+                    <div class="selected-image-container">
+
+                    </div>
+                    <form id="messageForm" onsubmit="lwhOpenCbotonFormSubmit(event)">
+                        <div>
+                            <div class="input">
+
+
+                                <div>
+                                    <input type="text" id="message" name="message" placeholder="Type your message"
+                                        autocomplete="off" required>
+                                </div>
+
+                            </div>
+                            <div>
+                                <button type="submit" id="submit-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
