@@ -1,5 +1,5 @@
-const apiUrl = 'http://wp-chatbot.local/wp-json/myapi/v1/chat-bot/';
-const botConfigurationUrl = 'http://wp-chatbot.local/wp-json/myapi/v1/chat-bot-config';
+const apiUrl = 'http://ai-chatbot.local/wp-json/myapi/v1/chat-bot/';
+const botConfigurationUrl = 'http://ai-chatbot.local/wp-json/myapi/v1/chat-bot-config';
 const copyButtons = document.querySelectorAll('.lwh-open-cbot .copy-button');
 const button = document.querySelector('.lwh-open-cbot #submit-btn');
 let messageInput = document.querySelector('.lwh-open-cbot #message');
